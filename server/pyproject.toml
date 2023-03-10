@@ -1,0 +1,28 @@
+[project]
+name = "beedo"
+version = "1.0.0"
+description = "The online micro-job platform."
+readme = "README.rst"
+license = {text = "BSD-3-Clause"}
+maintainers = [{name = "Kay Cee", email = "hola@beedo.ng"}]
+dependencies = [
+    "flask",
+]
+
+[project.urls]
+Documentation = "https://dev.beedo.ng/docs/"
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["error"]
+
+[tool.coverage.run]
+branch = true
+source = ["beedo", "tests"]
