@@ -10,10 +10,10 @@ from bson.errors import InvalidId
 
 
 def get_db():
-    """
+    '''
     Configuration method to return db instance
-    """
-    db = getattr(g, "_database", None)
+    '''
+    db = getattr(g, '_database', None)
 
     if db is None:
 
